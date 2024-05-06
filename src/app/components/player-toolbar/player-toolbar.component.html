@@ -1,0 +1,77 @@
+<p-toolbar
+  styleClass="shadow-2 h-5rem player-toolbar_bcolor"
+  id="track-toolbar"
+  [style]="{
+    background:
+      '-webkit-linear-gradient(270deg,rgba(196, 196, 196, 0.23012955182072825) 7%,rgba(196, 196, 196, 0.17970938375350143) 59%,rgba(196, 196, 196, 0.3701855742296919) 100%)',
+    border: 'none'
+  }"
+>
+  <ng-template pTemplate="start">
+    <div class="flex align-items-center gap-2" style="padding-left: 16rem">
+      <span class="font-bold text-bluegray-50 text-xl">Roar</span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="center">
+    <div class="flex flex-wrap align-items-center gap-3">
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-step-backward text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-pause text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-step-forward text-2xl"></i>
+      </button>
+    </div>
+    <div class="flex align-items-center gap-2 pr-3">
+      <span class="font-bold text-bluegray-50">2:33</span>
+    </div>
+    <div class="card flex justify-content-center">
+      <p-slider
+        class="player-toolbar__range__width"
+        [(ngModel)]="value"
+      ></p-slider>
+    </div>
+    <div class="flex align-items-center gap-2 pl-3">
+      <span class="font-bold text-bluegray-50">3:30</span>
+    </div>
+    <div class="flex flex-wrap align-items-center gap-3">
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-volume-up text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-book text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-sync text-2xl"></i>
+      </button>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="end"> </ng-template>
+</p-toolbar>
+
+<div
+  id="artist"
+  style="
+    position: absolute;
+    left: 3rem;
+    bottom: 30px;
+    width: 9rem;
+    height: 9rem;
+  "
+>
+<img src="assets/images/roar.jpg" style="height: 9rem" />
+</div>

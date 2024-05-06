@@ -1,0 +1,27 @@
+<div class="card flex justify-content-center " [style]="{width: '100%'}">
+    <p-menu [style]="{width: '100%', border:'none', borderRight:'2px solid rgba(196,196,196,0.13)', borderRadius:'0px', marginTop:'50px', backgroundColor:'inherit'}"  [model]="items" class="h-full p-menu-container w-full">
+        <ng-template pTemplate="item" let-item>
+            <a *ngIf="!item?.url" [attr.tabindex]="-1" class="p-menuitem-link flex justify-content-between align-items-center p-3" [routerLink]="item.routerLink">
+                <div>
+                    <span [class]="item.icon" style="padding-right: 8px;"></span>
+                    
+                    <span > <span>{{ item.label }}</span></span>
+                </div>
+                <div>
+                    <span *ngIf="item.shortcut" [class]="item.shortcutClass">{{ item.shortcut }}</span>
+                    <p-badge *ngIf="item.badge" [value]="item.badge" [severity]="item.badgeSeverity"></p-badge>
+                </div>
+            </a>
+            <a *ngIf="item?.url" [attr.tabindex]="-1" class="p-menuitem-link flex justify-content-between align-items-center p-3" [attr.href]="item.url">
+                <div>
+                    <span [class]="item.icon" style="padding-right: 8px;"></span>
+                    <span> {{ item.label }}</span>
+                </div>
+                <div>
+                    <span *ngIf="item.shortcut" [class]="item.shortcutClass">{{ item.shortcut }}</span>
+                    <p-badge *ngIf="item.badge" [value]="item.badge" [severity]="item.badgeSeverity"></p-badge>
+                </div>
+            </a>
+        </ng-template>
+    </p-menu>
+</div>

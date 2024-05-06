@@ -1,0 +1,211 @@
+<p-toolbar
+  styleClass="h-5rem player-toolbar_bcolor"
+  id="track-main"
+  [style]="{
+    background: 'transparent',
+    border: 'none'
+  }"
+>
+  <ng-template pTemplate="start">
+    <div class="flex flex-wrap align-items-center gap-3">
+      <button
+        style="background-color: #c4c4c437"
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-arrow-left text-l"></i>
+      </button>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="center"> </ng-template>
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2" style="padding-right: 3rem">
+      <span class="font-bold text-bluegray-50">Upgrade</span>
+    </div>
+    <div class="flex flex-wrap align-items-center gap-3">
+      <p-button
+        label="FeelsDesign"
+        icon="pi pi-user"
+        [style]="{
+          background:
+            '-webkit-linear-gradient(270deg,rgba(196, 196, 196, 0.23012955182072825) 7%,rgba(196, 196, 196, 0.17970938375350143) 59%,rgba(196, 196, 196, 0.3701855742296919) 100%)',
+          border: 'none'
+        }"
+        [rounded]="true"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-toolbar>
+<div
+  style="height: 260px; position: absolute; width: 100%; top: 75px"
+  class="title"
+>
+  <div
+    class="h-full flex flex-column align-items-center justify-content-center gap-4"
+    style="padding-right: 30rem"
+  >
+    <span class="font-bold text-bluegray-50 text-7xl">Katy Perry</span>
+    <span class="font-bold text-500 text-xl" style="padding-right: 10rem;">American singer</span>
+  </div>
+  <div
+    class="w-max absolute"
+    style="padding-left: 8rem; bottom: 2rem !important"
+  >
+    <img src="assets/images/main-singer-image.png" style="height: 16rem" />
+  </div>
+  <div class="bottom-0 absolute pl-8">
+    <button
+      style="background-color: #d64e60 !important"
+      class="p-link inline-flex justify-content-center align-items-center text-white border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+    >
+      <i
+        class="pi pi-pause text-4xl"
+        style="font-weight: bolder; padding: 20px"
+      ></i>
+    </button>
+  </div>
+</div>
+<div
+  style="
+    height: 100%;
+    top: 260px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  "
+  class="main"
+>
+  <div class="header text-3xl pl-8 pt-6">
+    <span class="font-bold text-bluegray-50">Popular</span>
+  </div>
+  <div>
+    <ul class="p-0 pt-5">
+      <li
+        class="w-full h-6rem mb-3"
+        style="
+          background: -webkit-linear-gradient(
+            270deg,
+            rgba(196, 196, 196, 0.07) 43%,
+            rgba(196, 196, 196, 0.18) 91%
+          );
+        "
+      >
+        <div class="h-full flex">
+          <div class="flex-1 flex align-items-center" id="start">
+            <button
+              class="pl-7 absolute p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+            >
+              <i class="pi pi-sliders-v text-2xl"></i>
+            </button>
+            <div
+              id="artist"
+              class="absolute h-5rem w-5rem"
+              style="left: 7rem"
+            >
+            <img src="assets/images/roar.jpg" style="height: 5rem" />
+          </div>
+            <div class="absolute" style="left: 14rem">
+              <span class="font-bold text-bluegray-50 text-2xl">Roar</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="center"
+          >
+            <div>
+              <span class="font-bold text-bluegray-50 text-xl">3:30</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="end"
+          >
+            <div class="flex flex-wrap align-items-center gap-6">
+              <button
+                class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+              >
+                <i class="pi pi-heart-fill text-2xl"></i>
+              </button>
+              <button
+                class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+              >
+                <i class="pi pi-download text-2xl"></i>
+              </button>
+              <button
+                class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+              >
+                <i class="pi pi-ellipsis-h text-2xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="w-full h-6rem mb-3"
+      >
+        <div class="h-full flex">
+          <div class="flex-1 flex align-items-center" id="start">
+            <div
+              id="artist"
+              class="absolute h-5rem w-5rem"
+              style="left: 7rem"
+            >
+            <img src="assets/images/firework.jpg" style="height: 5rem" />
+
+          </div>
+            <div class="absolute" style="left: 14rem">
+              <span class="font-bold text-bluegray-50 text-2xl">Firework</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="center"
+          >
+            <div>
+              <span class="font-bold text-bluegray-50 text-xl">3:47</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="end"
+          >
+          </div>
+        </div>
+      </li>
+      <li
+        class="w-full h-6rem mb-3"
+      >
+        <div class="h-full flex">
+          <div class="flex-1 flex align-items-center" id="start">
+            <div
+              id="artist"
+              class="absolute h-5rem w-5rem"
+              style="left: 7rem"
+            >
+            <img src="assets/images/hot n cold.jpg" style="height: 5rem" />
+          </div>
+            <div class="absolute" style="left: 14rem">
+              <span class="font-bold text-bluegray-50 text-2xl">Hot N Cold</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="center"
+          >
+            <div>
+              <span class="font-bold text-bluegray-50 text-xl">3:40</span>
+            </div>
+          </div>
+          <div
+            class="flex-1 flex align-items-center justify-content-center"
+            id="end"
+          >
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div style="padding-left: 7rem;padding-top: 2rem;">
+    <span class="font-bold text-500 text-xl">See more</span>
+  </div>
+</div>

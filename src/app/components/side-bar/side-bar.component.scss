@@ -1,0 +1,14 @@
+::ng-deep {
+    .p-menu-container :first-child {
+        min-height: 100%;
+      }
+    .ui-menu {
+        padding: 2em 0 0 0;
+      }
+    .p-menu .p-submenu-header {
+        background-color: inherit;
+    }
+    .p-menuitem-content a {
+        color: white;
+    }
+}
